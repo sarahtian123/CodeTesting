@@ -1,44 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 
 public class PrimeFactors {
+
+	public static void main(String[] args) throws Exception{
+		
+	// Reading numbers from the file "numbers", and print out the prime factors for each given integer, then close the file.
 	
-	public static List<Integer> primeFactors(int num){
-		
-		
-		List<Integer> fact = new ArrayList<Integer>();
-		for (int i=2; i<=num; i++){
-			while(num % i==0){
-				fact.add(i);
-				num /=i;
-			}		
-		}		
-		return fact;
-	}
+		Readfile r = new Readfile();
+		r.openFile();
+		r.readFile();
+		r.closeFile();
 
-
-
-	public static void main(String[] args) {
-	// TODO Auto-generated method stub
-		
-		Scanner input = new Scanner(System.in);
-		
-		while (input.hasNext()){
-			int a =input.nextInt();
-			for (Integer result:primeFactors(a)){
-				
-				
-				System.out.print(result +", ");
-				
-			}
-		
 		}
-	
-	
-	
        
 }
 
-}
+
